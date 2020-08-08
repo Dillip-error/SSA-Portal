@@ -31,7 +31,7 @@ public class CheckSSN_NumberController {
 
 	@ApiOperation(value = "Read SSN number from path param and return idValid or not")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "SSN is valid") })
-	@GetMapping(value = "/ssn/{ssnNo}")
+	@GetMapping(value = "/ssn/{ssnNo}",produces = {"application/json","application/xml"})
 	public ResponseEntity<?> ssnIsValid(@PathVariable("ssnNo") Integer ssn) {
 		LOGGER.info(" ssnIsValid Method stated");
 		try {
